@@ -1,0 +1,10 @@
+.popup__success-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  background-image: url(../../../images/Success.png);
+  background-repeat: no-repeat;
+  border: none;
+  margin: 0 auto;
+  margin-top: 60px;
+}

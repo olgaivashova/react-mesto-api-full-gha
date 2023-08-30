@@ -1,0 +1,10 @@
+.popup__success-image_type_error {
+  width: 120px;
+  height: 120px;
+  object-fit: fill;
+  background-image: url(../../../../images/Fail.png);
+  background-repeat: no-repeat;
+  border: none;
+  margin: 0 auto;
+  margin-top: 60px;
+}

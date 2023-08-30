@@ -1,0 +1,11 @@
+.profile__stripe {
+  display: flex;
+  max-width: 336px;
+}
+@media screen and (max-width: 620px) {
+  .profile__stripe {
+    max-width: 282px;
+    padding-left: 46px;
+    padding-top: 26px;
+  }
+}

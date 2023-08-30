@@ -1,0 +1,8 @@
+.elements__grid-item {
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 10px;
+  box-sizing: border-box;
+  width: 282px;
+  position: relative;
+}

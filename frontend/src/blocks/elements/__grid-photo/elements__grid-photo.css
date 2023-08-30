@@ -1,0 +1,11 @@
+.elements__grid-photo {
+  width: 282px;
+  height: 282px;
+  display: block;
+  object-fit: cover;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}

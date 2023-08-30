@@ -1,0 +1,11 @@
+.popup__form-field {
+  display: block;
+  box-sizing: border-box;
+  margin-left: 36px;
+  height: 56px;
+}
+@media screen and (max-width: 1275px) {
+  .popup__form-field {
+    margin-left: 22px;
+  }
+}
