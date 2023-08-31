@@ -10,6 +10,6 @@
 
 IP-адрес 158.160.81.237
 
-Frontend https://...
+Frontend https://mesto.oliva.nomoredomainsicu.ru
 
-Backend https://...
+Backend https://api.mesto.oliva.nomoredomainsicu.ru
