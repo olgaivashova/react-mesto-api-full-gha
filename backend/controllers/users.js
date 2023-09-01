@@ -12,7 +12,9 @@ const BadRequestError = require("../errors/badRequestError");
 const NotFoundError = require("../errors/notFoundError");
 const ConflictError = require("../errors/conflictError");
 
-const { SECRET_KEY = "hello mesto" } = process.env;
+// const { SECRET_KEY = "hello mesto" } = process.env;
+// eslint-disable-next-line no-console
+// console.log(SECRET_KEY);
 
 module.exports.createUser = (req, res, next) => {
   const { name, about, avatar, email, password } = req.body;
@@ -56,7 +58,7 @@ module.exports.login = (req, res, next) => {
   return User.findUserByCredentials(email, password)
     .then((user) => {
       // аутентификация успешна! пользователь в переменной user
-      const token = jwt.sign({ _id: user._id }, SECRET_KEY, {
+      const token = jwt.sign({ _id: user._id }, "some-secret-key", {
         expiresIn: "7d",
       });
       // вернём токен
