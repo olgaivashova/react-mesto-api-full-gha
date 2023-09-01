@@ -8,7 +8,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 158.160.81.237
+IP 158.160.81.237
 
 Frontend https://mesto.oliva.nomoredomainsicu.ru
 
