@@ -1,6 +1,6 @@
 /* eslint-disable spaced-comment */
 /* eslint-disable comma-dangle */
-// require("dotenv").config();
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 
