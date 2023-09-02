@@ -46,8 +46,9 @@ module.exports.createUser = (req, res, next) => {
         );
       } else if (err instanceof mongoose.Error.ValidationError) {
         next(new BadRequestError(err.message));
+      } else {
+        next(err);
       }
-      next(err);
     });
 };
 
