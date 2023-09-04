@@ -1,10 +1,14 @@
+import { useEffect } from "react";
 import logo from "../../images/logo.svg";
 import { Link } from "react-router-dom";
 
-export default function Header({ name, profileEmail }) {
-  function signout() {
-    localStorage.removeItem("jwt");
-  }
+export default function Header({ name, profileEmail, onLogout }) {
+  /*useEffect(() => {
+    signout();
+  }, []);*/
+  /* function signout() {
+    localStorage.clear();
+  }*/
   return (
     <header className="header">
       <img className="header__logo" src={logo} alt="Логотип Mesto Russia" />
@@ -19,7 +23,7 @@ export default function Header({ name, profileEmail }) {
         <>
           <div className="header__profile-container">
             <p className="header__profile-email">e-mail:{profileEmail}</p>
-            <Link to={"sign-in"} className="header__link" onCLick={signout}>
+            <Link to={"sign-up"} className="header__link" onCLick={onLogout}>
               Выйти
             </Link>
           </div>

@@ -166,10 +166,13 @@ function App() {
     }
   }, [loggedIn]);
 
-  /* function signout() {
+  function logout() {
     localStorage.removeItem("jwt");
     setLoggedIn(false);
-  }*/
+  }
+  useEffect(() => {
+    logout();
+  }, []);
 
   return (
     <div className="App" style={{ backgroundColor: "#000" }}>
@@ -189,7 +192,7 @@ function App() {
                   onDelete={handleDeletePopupClick}
                   card={card}
                   loggedIn={loggedIn}
-                  //onSignout={signout}
+                  onLogout={logout}
                 />
               }
             />
