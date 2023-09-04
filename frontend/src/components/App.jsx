@@ -135,7 +135,7 @@ function App() {
 
   useEffect(() => {
     handleTokenCheck();
-  }, []);
+  }, [loggedIn]);
 
   function handleTokenCheck() {
     const jwt = localStorage.getItem("jwt");
