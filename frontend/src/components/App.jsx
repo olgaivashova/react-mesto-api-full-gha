@@ -137,7 +137,7 @@ function App() {
     handleTokenCheck();
   }, []);
 
-  function handleTokenCheck() {
+  function handleTokenCheck(res) {
     const jwt = localStorage.getItem("jwt");
     if (jwt) {
       auth
@@ -170,9 +170,9 @@ function App() {
     localStorage.removeItem("jwt");
     setLoggedIn(false);
   }
-  useEffect(() => {
+  /*useEffect(() => {
     logout();
-  }, []);
+  }, []);*/
 
   return (
     <div className="App" style={{ backgroundColor: "#000" }}>

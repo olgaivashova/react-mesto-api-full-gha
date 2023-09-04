@@ -58,7 +58,7 @@ module.exports.login = (req, res, next) => {
     .then((user) => {
       // аутентификация успешна! пользователь в переменной user
       const token = jwt.sign({ _id: user._id }, SECRET_JWT, {
-        expiresIn: "7d",
+        expiresIn: "1m",
       });
       // вернём токен
       res.send({ token });
