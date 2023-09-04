@@ -16,7 +16,7 @@ function Main({
   handleSignin,
 }) {
   const currentUser = useContext(CurrentUserContext);
-  console.log(card);
+
   return (
     <main className="main">
       {name === "main" ? (

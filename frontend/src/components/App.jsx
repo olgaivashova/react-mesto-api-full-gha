@@ -143,10 +143,8 @@ function App() {
       auth
         .checkToken(jwt)
         .then((res) => {
-          console.log(res);
           setLoggedIn(true);
           setProfileEmail(res.email);
-          navigate("/");
         })
         .catch(console.error);
     } else {
@@ -168,9 +166,10 @@ function App() {
     }
   }, [loggedIn]);
 
-  function signout() {
+  /* function signout() {
     localStorage.removeItem("jwt");
-  }
+    setLoggedIn(false);
+  }*/
 
   return (
     <div className="App" style={{ backgroundColor: "#000" }}>
@@ -190,7 +189,7 @@ function App() {
                   onDelete={handleDeletePopupClick}
                   card={card}
                   loggedIn={loggedIn}
-                  onSignout={signout}
+                  //onSignout={signout}
                 />
               }
             />
