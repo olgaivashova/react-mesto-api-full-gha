@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Register = ({ handleSignup, loggedIn }) => {
   const [formValue, setFormValue] = useState({
@@ -19,18 +19,6 @@ const Register = ({ handleSignup, loggedIn }) => {
     e.preventDefault();
     handleSignup(formValue.password, formValue.email);
   };
-
-  function resetRegister() {
-    setFormValue({
-      password: "",
-      email: "",
-    });
-  }
-  useEffect(() => {
-    if (!loggedIn) {
-      resetRegister();
-    }
-  }, [loggedIn]);
 
   return (
     <>

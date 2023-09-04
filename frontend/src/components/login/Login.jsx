@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Login = ({ handleSignin, loggedIn }) => {
   const [loginValue, setLoginValue] = useState({
@@ -22,17 +22,6 @@ const Login = ({ handleSignin, loggedIn }) => {
     }
     handleSignin(loginValue.password, loginValue.email);
   }
-  /*function resetLogin() {
-    setLoginValue({
-      password: "",
-      email: "",
-    });
-  }
-  useEffect(() => {
-    if (!loggedIn) {
-      resetLogin();
-    }
-  }, [loggedIn]);*/
 
   return (
     <div className="login">
