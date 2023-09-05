@@ -135,7 +135,7 @@ function App() {
 
   useEffect(() => {
     handleTokenCheck();
-  }, [loggedIn]);
+  }, [navigate]);
 
   function handleTokenCheck() {
     const jwt = localStorage.getItem("jwt");
@@ -145,6 +145,7 @@ function App() {
         .then((res) => {
           setLoggedIn(true);
           setProfileEmail(res.email);
+          navigate("/", { replace: true });
         })
         .catch(console.error);
     } else {
