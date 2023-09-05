@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-const Register = ({ handleSignup, loggedIn }) => {
+const Register = ({ handleSignup }) => {
   const [formValue, setFormValue] = useState({
     password: "",
     email: "",
@@ -18,6 +18,17 @@ const Register = ({ handleSignup, loggedIn }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     handleSignup(formValue.password, formValue.email);
+    setFormValue({
+      password: "",
+      email: "",
+    });
+  };
+
+  const resetRegister = () => {
+    setFormValue({
+      password: "",
+      email: "",
+    });
   };
 
   return (
@@ -51,7 +62,11 @@ const Register = ({ handleSignup, loggedIn }) => {
         </form>
         <div className="register__signin">
           <p className="register__signin-text">Уже зарегистрированы?</p>
-          <Link to="/sign-in" className="register__signin-link">
+          <Link
+            to="/sign-in"
+            className="register__signin-link"
+            onClick={resetRegister}
+          >
             Войти
           </Link>
         </div>

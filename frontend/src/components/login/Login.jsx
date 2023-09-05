@@ -22,7 +22,12 @@ const Login = ({ handleSignin, loggedIn }) => {
     }
     handleSignin(loginValue.password, loginValue.email);
   }
-
+  const resetLogin = () => {
+    setLoginValue({
+      password: "",
+      email: "",
+    });
+  };
   return (
     <div className="login">
       <p className="login__title">Вход</p>
@@ -49,7 +54,7 @@ const Login = ({ handleSignin, loggedIn }) => {
             onChange={handleChange}
           />
         </div>
-        <button type="submit" className="login__button">
+        <button type="submit" className="login__button" onClick={resetLogin}>
           Войти
         </button>
       </form>
