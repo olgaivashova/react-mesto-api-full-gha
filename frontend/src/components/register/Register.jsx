@@ -24,13 +24,6 @@ const Register = ({ handleSignup }) => {
     });
   };
 
-  const resetRegister = () => {
-    setFormValue({
-      password: "",
-      email: "",
-    });
-  };
-
   return (
     <>
       <section className="register">
@@ -62,11 +55,7 @@ const Register = ({ handleSignup }) => {
         </form>
         <div className="register__signin">
           <p className="register__signin-text">Уже зарегистрированы?</p>
-          <Link
-            to="/sign-in"
-            className="register__signin-link"
-            onClick={resetRegister}
-          >
+          <Link to="/sign-in" className="register__signin-link">
             Войти
           </Link>
         </div>
